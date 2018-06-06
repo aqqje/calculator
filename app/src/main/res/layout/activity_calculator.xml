@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#6aE9967A">
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="计算器"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:background="#FA8072"
+        android:gravity="center"/>
+    <!--
+        利用相对布局:
+            1.使 GridView 居于询问
+            2.使 EditText 在 GridView 之上同时匹配父容器顶部
+    -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <!-- 计算器的按键 -->
+        <GridView
+            android:id="@+id/grid_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="4"
+            android:stretchMode="columnWidth"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:gravity="center" />
+
+        <!-- 计算表达式 -->
+        <EditText
+            android:id="@+id/edit_input"
+            android:padding="10dp"
+            android:singleLine="false"
+            android:scrollbars="vertical"
+            android:hint="输入表达式"
+            android:gravity="start"
+            android:textSize="22sp"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/grid_buttons"
+            android:background="@drawable/shape_edit"/>
+    </RelativeLayout>
+
+</LinearLayout>
