@@ -1,13 +1,12 @@
 package com.example.administrator.aqqje;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
@@ -79,6 +78,8 @@ public class CalculatorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // 隐藏标题
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        // 隐藏状态栏
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_calculator);
         // 查找控件
         mgridButtons = (GridView)findViewById(R.id.grid_buttons);

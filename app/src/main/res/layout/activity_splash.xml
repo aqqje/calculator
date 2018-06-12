@@ -25,20 +25,33 @@
         android:id="@+id/iv_logo"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textView2"
         android:layout_below="@+id/tv_splash_version"
-        android:layout_marginTop="59dp"
+        android:layout_marginTop="46dp"
         android:scaleType="center"
-        android:src="@mipmap/splash" />
+        android:src="@mipmap/logospash" />
 
     <TextView
+        android:id="@+id/tv_weclome"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textView2"
         android:layout_below="@+id/iv_logo"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="22dp"
         android:gravity="center"
         android:text="欢迎使用..."
         android:textColor="#00E5EE"
         android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/tv_splash_version"
+        android:layout_marginBottom="19dp"
+        android:layout_marginStart="31dp"
+        android:text="java1613欧明"
+        android:textColor="#ffe5EE"
+        android:textSize="14dp" />
 </RelativeLayout>

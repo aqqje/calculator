@@ -10,6 +10,6 @@
     </shape></item>
     <item><shape>
         <corners android:radius="5dp"/>
-        <solid android:color="#FA8072"></solid>
+        <solid android:color="#63B8FF"></solid>
     </shape></item>
 </selector>
